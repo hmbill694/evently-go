@@ -15,6 +15,7 @@ For this project we're using
 - GO - The star of the show here. The programming language with the highest paid developers. This is based on some random google searches.
 - HTMX - This is how we're going to be handling all the fun client stuff. Will this work? Will I like it? Who knows?
 - POSTGRES - Old reliable.
+- Tailwind & DaisyUI - I'm not gonna even front. I'm gonna use Tailwind and Daisy here because I am not a designer. Something, something, something beauty is in the eye of the beholder.
 
 ## Retrospetive
 
