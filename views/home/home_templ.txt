@@ -1,0 +1,1 @@
+<div class=\"h-full flex flex-col gap-5 p-4\"><div class=\"flex flex-col lg:flex-row lg:justify-between gap-2\"><h1 class=\"text-5xl font-bold card-title\">Your events</h1><label class=\"input input-bordered flex items-center gap-2\">Search <input type=\"text\" class=\"grow\"></label></div><div class=\"flex flex-col lg:grid lg:grid-cols-3 gap-4 m-2\">helo</div></div>
