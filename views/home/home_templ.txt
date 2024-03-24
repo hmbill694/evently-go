@@ -1,1 +1,8 @@
-<div class=\"h-full flex flex-col gap-5 p-4\"><div class=\"flex flex-col lg:flex-row lg:justify-between gap-2\"><h1 class=\"text-5xl font-bold card-title\">Your events</h1><label class=\"input input-bordered flex items-center gap-2\">Search <input type=\"text\" class=\"grow\"></label></div><div class=\"flex flex-col lg:grid lg:grid-cols-3 gap-4 m-2\">helo</div></div>
+<div class=\"card w-full bg-base-300 shadow-xl rounded-xl p-1\" id=\"
+\"><div class=\"card-body flex flex-col gap-4\"><h2 class=\"card-title text-lg\">
+</h2><p>
+</p><p>
+</p><div class=\"card-actions justify-end\"><a href=\"
+\" class=\"btn btn-primary\">Go</a></div></div></div>
+<div class=\"h-full flex flex-col gap-5 p-4\"><div class=\"flex flex-col lg:flex-row lg:justify-between gap-2\"><h1 class=\"text-5xl font-bold card-title\">Your events</h1><form action=\"/event\" method=\"get\"><label class=\"input input-bordered flex items-center gap-2\">Search <input type=\"text\" class=\"grow\" type=\"search\" name=\"q\" value=\"\" hx-get=\"/event\" hx-trigger=\"search, keyup delay:200ms changed\" hx-target=\"#event-group\" hx-swap=\"innerHTML\"></label></form></div><div class=\"flex flex-col lg:grid lg:grid-cols-3 gap-4 m-2\" id=\"event-group\">
+</div></div>

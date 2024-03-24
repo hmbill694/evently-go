@@ -1,0 +1,14 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "evently",
+      "database": "evently",
+      "username": "api-user",
+      "password": "password123"
+    }
+  ]
+}

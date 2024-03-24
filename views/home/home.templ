@@ -2,20 +2,50 @@ package home
 
 import (
 	"github.com/hmbil694/co-author-go/views/ui/layout"
+	"github.com/hmbil694/co-author-go/model"
+	"github.com/hmbil694/co-author-go/views/utils"
+	"fmt"
 )
 
-templ Home() {
+templ EventGroup(events []model.Event) {
+	for _, event := range events {
+		<div class="card w-full bg-base-300 shadow-xl rounded-xl p-1" id={ fmt.Sprint("event-", event.ID) }>
+			<div class="card-body flex flex-col gap-4">
+				<h2 class="card-title text-lg">{ event.Name }</h2>
+				<p>{ event.Description }</p>
+				<p>{ event.Location }</p>
+				<div class="card-actions justify-end">
+					<a href={ utils.Urlify("/event/%s", event.ID) } class="btn btn-primary">Go</a>
+				</div>
+			</div>
+		</div>
+	}
+}
+
+templ Home(events []model.Event) {
 	@layout.Layout() {
 		<div class="h-full flex flex-col gap-5 p-4">
 			<div class="flex flex-col lg:flex-row lg:justify-between gap-2">
 				<h1 class="text-5xl font-bold card-title">Your events</h1>
-				<label class="input input-bordered flex items-center gap-2">
-					Search
-					<input type="text" class="grow"/>
-				</label>
+				<form action="/event" method="get">
+					<label class="input input-bordered flex items-center gap-2">
+						Search
+						<input
+							type="text"
+							class="grow"
+							type="search"
+							name="q"
+							value=""
+							hx-get="/event"
+							hx-trigger="search, keyup delay:200ms changed"
+							hx-target="#event-group"
+							hx-swap="innerHTML"
+						/>
+					</label>
+				</form>
 			</div>
-			<div class="flex flex-col lg:grid lg:grid-cols-3 gap-4 m-2">
-				helo
+			<div class="flex flex-col lg:grid lg:grid-cols-3 gap-4 m-2" id="event-group">
+				@EventGroup(events)
 			</div>
 		</div>
 	}
